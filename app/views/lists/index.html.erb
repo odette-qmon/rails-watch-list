@@ -1,0 +1,27 @@
+<header class="header">
+  <div class="container">
+    <h1>Create movie lists</h1>
+    <p>
+      From scratch!
+    </p>
+  </div>
+</header>
+<div class="container py-5">
+  <div class="container">
+    <div class="text-center">
+      <h4>My Lists</h4>
+    </div>
+  </div>
+  <div class="cards py-5">
+  <% @lists.each do |list| %>
+
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://source.unsplash.com/ruJm3dBXCqw')">
+        <h4>
+          <%= link_to list.name, list_path(list) %>
+        </h4>
+      </div>
+
+  <% end %>
+  </div>
+</div>
+

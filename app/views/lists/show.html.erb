@@ -1,0 +1,23 @@
+<div class="container py-5">
+  <h3>
+    <%= @list.name %>
+  </h3>
+  <hr>
+  <% @list.movies.each do |movie| %>
+    <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+    <h4>
+      <%= movie.title %>
+    </h4>
+    <p>
+      <%= movie.overview %>
+    </p>
+    <h5>
+      Comments:
+    </h5>
+    <%= bookmark.comment %>
+    <hr>
+  <% end %>
+  <%= link_to 'Add a Bookmark', new_list_bookmark_path(@list) %>
+</div>
+
+<!-- link_to #'Delete Bookmark', bookmark_path(@bookmark), method: :delete -->

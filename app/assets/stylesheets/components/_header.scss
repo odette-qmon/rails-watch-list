@@ -1,0 +1,17 @@
+.header {
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/atsUqIm3wxo) no-repeat center;
+  background-size: cover;
+  background-position: center;
+  background-color: transparent !important;
+  padding: 150px 0;
+  h1 {
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    font-size: 40px;
+    font-weight: bold;
+  }
+  p{
+    color: rgba(white, 0.8);
+    font-size: 18px;
+  }
+}
