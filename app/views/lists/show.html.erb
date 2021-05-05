@@ -15,9 +15,12 @@
       Comments:
     </h5>
     <%= bookmark.comment %>
+    <p>
+      <%= link_to 'Delete', bookmark_path(bookmark), method: :delete %>
+    </p>
     <hr>
   <% end %>
   <%= link_to 'Add a Bookmark', new_list_bookmark_path(@list) %>
 </div>
 
-<!-- link_to #'Delete Bookmark', bookmark_path(@bookmark), method: :delete -->
+
