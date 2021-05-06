@@ -16,9 +16,43 @@
   border-radius: 5px;
   a{
     text-decoration: none;
-    color: rgba(white, 0.8);
+    color: white;
   }
   a:hover{
-    color: white;
+    opacity: 0.8;
+  }
+}
+
+.movie-cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+}
+.card-movie{
+  background-size: cover;
+  background-position: center;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  .movie-img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.card-text{
+  padding: 16px;
+  h3{
+    font-size: 22px;
+    font-weight: strong;
+  }
+  .movie-comment{
+    font-style: italic;
+  }
+  p{
+    font-size:14px;
+  }
+  a:hover{
+    opacity: black;
   }
 }

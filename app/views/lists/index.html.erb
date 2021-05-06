@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url(https://source.unsplash.com/atsUqIm3wxo)">
   <div class="container">
     <h1>Create movie lists</h1>
     <p>
@@ -14,8 +14,8 @@
   </div>
   <div class="cards py-5">
   <% @lists.each do |list| %>
-
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://source.unsplash.com/ruJm3dBXCqw')">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+      url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : "https://source.unsplash.com/ruJm3dBXCqw" %>)">
         <h4>
           <%= link_to list.name, list_path(list) %>
         </h4>
@@ -25,3 +25,4 @@
   </div>
 </div>
 
+<!-- if statement to display images: si tiene photo attached, si no, load el url (al inicio cuando no había botón de cargar img) -->
