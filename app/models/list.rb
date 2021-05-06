@@ -4,4 +4,5 @@ class List < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   # cloudinary and active storage config
   has_one_attached :photo
+  # we could add a validation for photos here
 end
