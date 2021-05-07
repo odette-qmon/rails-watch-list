@@ -30,4 +30,17 @@
       </div>
     <% end %>
   </div>
+  <!-- new_list_bookmark form:
+  1. copiar el codigo de bookmarks/new
+  2. checar el bug en localhost (necesita encontrar la instancia de bookmark @bookmark = Bookmark.new)
+  3. ponerla en el #show de lists controller
+  -->
+  <div class="container py-5" >
+    <h3>Add a movie to your <%= @list.name %> list</h3>
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
+      <%= f.association :movie %>
+      <%= f.submit %>
+    <% end %>
+  </div>
 </div>
